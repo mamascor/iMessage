@@ -25,7 +25,8 @@ class MessagesManager: ObservableObject {
 
         // Read message from Firestore in real-time with the addSnapShotListener
         func getMessages() {
-            db.collection("messages").addSnapshotListener { querySnapshot, error in
+            
+//getting messages colletion in a snapshot listener            db.collection("messages").addSnapshotListener { querySnapshot, error in
                 
                 // If we don't have documents, exit the function
                 guard let documents = querySnapshot?.documents else {
